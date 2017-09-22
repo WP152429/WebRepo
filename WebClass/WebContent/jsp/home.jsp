@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -5,13 +7,14 @@
 <meta charset="utf-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Bootstrap 실습</title>
+<title>Bootstrap Test</title>
 
 <!-- Bootstrap CSS -->
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
 	integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
 	crossorigin="anonymous">
+<link rel="stylesheet" href="../css/footer.css">
 <script>
 	function menu_over(e) {
 		e.setAttribute("class", "nav-item active");
@@ -37,17 +40,7 @@ div.container {
 		</button>
 
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item" onmouseover="menu_over(this);"
-					onmouseout="menu_out(this);"><a class="nav-link" href="a.html">메뉴1
-						<span class="sr-only">(current)</span>
-				</a></li>
-				<li class="nav-item" onmouseover="menu_over(this);"
-					onmouseout="menu_out(this);"><a class="nav-link" href="p.html">메뉴2</a></li>
-				<li class="nav-item" onmouseover="menu_over(this);"
-					onmouseout="menu_out(this);"><a class="nav-link"
-					href="dom.html">메뉴3</a></li>
-			</ul>
+			<%@ include file="menu.jsp"%>
 			<form class="form-inline my-2 my-lg-0" id="LoginForm">
 				<input class="form-control mr-sm-2" type="text" placeholder="ID"
 					aria-label="ID" id="id" required> <input
@@ -81,26 +74,9 @@ div.container {
 			nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum
 			sodales, augue velit cursus nunc,</p>
 	</div>
-	
-	<div class="modal" id="myModal">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">로그인 결과</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p></p>
-      </div>
-      <div class="modal-footer">
-        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
+
+	<%@ include file="modal.jsp"%>
+	<%@ include file="footer.jsp"%>
 
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -117,29 +93,30 @@ div.container {
 	<script>
 		$(document).ready(function() {
 			$('#LoginForm').submit(function(event) {
-				// submit되는 것을 막기
+				// submitëë ê²ì ë§ê¸°
 				event.preventDefault();
 
-				// id, pwd 가져오기
+				// id, pwd ê°ì ¸ì¤ê¸°
 				var id = $('#id').val();
 				var pwd = $('#pwd').val();
 				console.log(id, pwd);
 
-				// 서버로 post방식으로 전송(ajax)
-				$.post("/WebClass/login", 
-						{"id" : id, "pwd" : pwd}, 
-						function(data) {
-							// 서버로부터 응답을 받으면 
-							// alert(data.id + '님 로그인되었습니다');
-							// alert(data.pwd + '로 로그인 하셨군요');
-							// alert('이제부터 당신의 개인정보는 저의 것입니다');
-							var myModal = $('#myModal');
-							myModal.modal();
-							myModal.find('.modal-body').text(data.id + '님 로그인되었습니다');
-						});
+				// ìë²ë¡ postë°©ìì¼ë¡ ì ì¡(ajax)
+				$.post("/WebClass/login", {
+					"id" : id,
+					"pwd" : pwd
+				}, function(data) {
+					// ìë²ë¡ë¶í° ìëµì ë°ì¼ë©´ 
+					// alert(data.id + 'ë ë¡ê·¸ì¸ëììµëë¤');
+					// alert(data.pwd + 'ë¡ ë¡ê·¸ì¸ íì¨êµ°ì');
+					// alert('ì´ì ë¶í° ë¹ì ì ê°ì¸ì ë³´ë ì ì ê²ìëë¤');
+					var myModal = $('#myModal');
+					myModal.modal();
+					myModal.find('.modal-body').text(data.id + '로그인되었습니다');
+				});
 			});
 		});
-		// 위와 동일한 기능
+		// ìì ëì¼í ê¸°ë¥
 		$(function() {
 
 		});
