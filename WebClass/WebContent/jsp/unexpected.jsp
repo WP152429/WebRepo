@@ -30,7 +30,7 @@
 			<hr class="my-4">
 
 
-			<form id="SignInForm">
+			<form id="SignUpForm">
 				<div class="form-group">
 					<label>Grade</label><br>
 					<div class="btn-group" data-toggle="buttons" id="grades">

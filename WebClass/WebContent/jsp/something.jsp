@@ -31,14 +31,14 @@
 				will happen to you.</p>
 			<hr class="my-4">
 			<p>
-				I thought I had to write something here.<br>You can login, sign
-				up or just look around.<br>Do whatever you want!
+				I thought I had to write something here.<br>You can login,
+				signup or just look around.<br>Do whatever you want!
 			</p>
 
 		</div>
 	</div>
 
-	<%@ include file="modal.jsp" %>
+	<%@ include file="modal.jsp"%>
 
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->

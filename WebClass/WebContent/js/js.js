@@ -13,9 +13,6 @@ $(document).ready(function() {
 						{id : id, pwd : pwd}, 
 						function(data) {
 							if(data.result) {
-//								var myModal = $('#myModal');
-//								myModal.modal();
-//								myModal.find('.modal-body').text(data.id + '님 로그인되었습니다');
 								location.href = "/WebClass/jsp/something.jsp";
 							} else {
 								var myModal = $('#myModal');
@@ -31,9 +28,6 @@ $(document).ready(function() {
 				$.post("/WebClass/bloglogout", 
 						{name : name}, 
 						function(data) {
-//							var myModal = $('#myModal');
-//							myModal.modal();
-//							myModal.find('.modal-body').text("로그아웃 되었습니다");
 							location.href = "/WebClass/jsp/something.jsp";
 						});
 			});

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="org.dimigo.vo.UserVO" %>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 	<a class="navbar-brand" href="something.jsp">Something</a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -23,8 +24,8 @@
 			</li>
 		</ul>
 		<% 
-			String name = (String)session.getAttribute("name");
-			if(name == null) {
+			UserVO user = (UserVO)session.getAttribute("user");
+			if(user == null) {
 		%>
 		<form class="form-inline my-2 my-lg-0" id="LoginForm">
 			<input class="form-control mr-sm-2" type="text" placeholder="ID"
@@ -37,7 +38,7 @@
 		<ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
 		  	<li class="nav-item dropdown">
 		    		<a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		  		<%= name %>님
+		  		<%= user.getName() %>님
 		    		</a>
 		     	<div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
 		     	<form id="LogoutForm">

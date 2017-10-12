@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.dimigo.vo.UserVO;
+
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 
@@ -49,7 +51,11 @@ public class BlogLoginServlet extends HttpServlet {
 		
 		if(result) {
 			HttpSession session = request.getSession();
-			session.setAttribute("name",id);
+			UserVO user = new UserVO();
+			user.setId(id);
+			user.setName("정현기");
+			user.setNickname("정현기의 별명");
+			session.setAttribute("user",user);
 		}
 		
 		response.setContentType("application/json charset=utf-8");
@@ -58,7 +64,6 @@ public class BlogLoginServlet extends HttpServlet {
 		Gson gson = new Gson();
 		JsonObject json = new JsonObject();
 		json.addProperty("result", result);
-		json.addProperty("id", id);
 		out.write(gson.toJson(json));
 		System.out.println(gson.toJson(json));
 		
