@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
@@ -46,12 +47,18 @@ public class BlogLoginServlet extends HttpServlet {
 		
 		boolean result = "test@naver.com".equals(id);
 		
+		if(result) {
+			HttpSession session = request.getSession();
+			session.setAttribute("name",id);
+		}
+		
 		response.setContentType("application/json charset=utf-8");
 		PrintWriter out = response.getWriter();
 		
 		Gson gson = new Gson();
 		JsonObject json = new JsonObject();
 		json.addProperty("result", result);
+		json.addProperty("id", id);
 		out.write(gson.toJson(json));
 		System.out.println(gson.toJson(json));
 		

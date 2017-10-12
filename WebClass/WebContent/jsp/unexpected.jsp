@@ -21,44 +21,12 @@
 </head>
 <body>
 
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="Navbar">
-		<a class="navbar-brand" href="something.jsp">Something</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse"
-			data-target="#navbarSupportedContent"
-			aria-controls="navbarSupportedContent" aria-expanded="false"
-			aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active"><a class="nav-link"
-					href="unexpected.jsp">unexpected</a></li>
-				<li class="nav-item"><a class="nav-link" href="will.jsp">will</a>
-				</li>
-				<li class="nav-item"><a class="nav-link" href="happen.jsp">happen</a>
-				</li>
-				<li class="nav-item"><a class="nav-link" href="to.jsp">to</a>
-				</li>
-				<li class="nav-item"><a class="nav-link" href="you.jsp">you</a>
-				</li>
-			</ul>
-			<form class="form-inline my-2 my-lg-0" id="LoginForm">
-				<input class="form-control mr-sm-2" type="text" placeholder="ID"
-					aria-label="ID" id="id" required> <input
-					class="form-control mr-sm-2" type="password" placeholder="PWD"
-					aria-label="PWD" id="pwd" required>
-				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
-			</form>
-		</div>
-	</nav>
-
-
+	<%@ include file="navbar.jsp" %>
 
 	<div class="jumbotron">
 		<div class="container">
 			<h1 class="display-3">Unexpected</h1>
-			<p class="lead">You can sign up here.</p>
+			<p class="lead">You can signup here.</p>
 			<hr class="my-4">
 
 
@@ -103,29 +71,7 @@
 		</div>
 	</div>
 
-
-
-	<div class="modal" id="myModal">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title">로그인 결과</h5>
-					<button type="button" class="close" data-dismiss="modal"
-						aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body">
-					<p></p>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary"
-						data-dismiss="modal">Close</button>
-				</div>
-			</div>
-		</div>
-	</div>
-
+	<%@ include file="modal.jsp" %>
 
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -140,6 +86,6 @@
 		crossorigin="anonymous"></script>
 
 
-	<script src="../js/js.js"></script>
+	<script src="../js/js.js?ver=0.0.1"></script>
 </body>
 </html>
