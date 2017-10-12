@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -20,7 +22,7 @@
 <body>
 
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="Navbar">
-		<a class="navbar-brand" href="something.html">Something</a>
+		<a class="navbar-brand" href="something.jsp">Something</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbarSupportedContent"
 			aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -31,14 +33,14 @@
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item active"><a class="nav-link"
-					href="unexpected.html">unexpected</a></li>
-				<li class="nav-item"><a class="nav-link" href="will.html">will</a>
+					href="unexpected.jsp">unexpected</a></li>
+				<li class="nav-item"><a class="nav-link" href="will.jsp">will</a>
 				</li>
-				<li class="nav-item"><a class="nav-link" href="happen.html">happen</a>
+				<li class="nav-item"><a class="nav-link" href="happen.jsp">happen</a>
 				</li>
-				<li class="nav-item"><a class="nav-link" href="to.html">to</a>
+				<li class="nav-item"><a class="nav-link" href="to.jsp">to</a>
 				</li>
-				<li class="nav-item"><a class="nav-link" href="you.html">you</a>
+				<li class="nav-item"><a class="nav-link" href="you.jsp">you</a>
 				</li>
 			</ul>
 			<form class="form-inline my-2 my-lg-0" id="LoginForm">
@@ -60,7 +62,7 @@
 			<hr class="my-4">
 
 
-			<form id="SignUpForm">
+			<form id="SignInForm">
 				<div class="form-group">
 					<label>Grade</label><br>
 					<div class="btn-group" data-toggle="buttons" id="grades">

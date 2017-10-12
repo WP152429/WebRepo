@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -19,8 +21,8 @@
 </head>
 <body>
 
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="Navbar">
-		<a class="navbar-brand" href="something.html">Something</a>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand" href="something.jsp">Something</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbarSupportedContent"
 			aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -30,15 +32,15 @@
 
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active"><a class="nav-link"
-					href="unexpected.html">unexpected</a></li>
-				<li class="nav-item"><a class="nav-link" href="will.html">will</a>
+				<li class="nav-item"><a class="nav-link" href="unexpected.jsp">unexpected</a>
 				</li>
-				<li class="nav-item"><a class="nav-link" href="happen.html">happen</a>
+				<li class="nav-item"><a class="nav-link" href="will.jsp">will</a>
 				</li>
-				<li class="nav-item"><a class="nav-link" href="to.html">to</a>
+				<li class="nav-item"><a class="nav-link" href="happen.jsp">happen</a>
 				</li>
-				<li class="nav-item"><a class="nav-link" href="you.html">you</a>
+				<li class="nav-item"><a class="nav-link" href="to.jsp">to</a>
+				</li>
+				<li class="nav-item active"><a class="nav-link" href="you.jsp">you</a>
 				</li>
 			</ul>
 			<form class="form-inline my-2 my-lg-0" id="LoginForm">
@@ -52,55 +54,15 @@
 	</nav>
 
 
-
 	<div class="jumbotron">
 		<div class="container">
-			<h1 class="display-3">Unexpected</h1>
-			<p class="lead">You can sign up here.</p>
+			<h1 class="display-3">You</h1>
+			<p class="lead">An empty page</p>
 			<hr class="my-4">
-
-
-			<form id="SignUpForm">
-				<div class="form-group">
-					<label>Grade</label><br>
-					<div class="btn-group" data-toggle="buttons" id="grades">
-						<label class="btn btn-secondary active"> <input
-							type="radio" name="grade" id="grade1" checked> Grade 1
-						</label> <label class="btn btn-secondary"> <input type="radio"
-							name="grade" id="grade2"> Grade 2
-						</label> <label class="btn btn-secondary"> <input type="radio"
-							name="grade" id="grade3"> Grade 3
-						</label>
-					</div>
-					<small id="Help" class="form-text text-muted">we'll never
-						share your grade with anyone else.</small>
-				</div>
-				<div class="form-group">
-					<label>Class</label> <select class="form-control" id="class">
-						<option value="1">1</option>
-						<option value="2">2</option>
-						<option value="3">3</option>
-						<option value="4">4</option>
-						<option value="5">5</option>
-						<option value="6">6</option>
-					</select>
-				</div>
-				<div class="form-group">
-					<label>Name</label> <input class="form-control" type="text"
-						placeholder="Name" aria-label="Name" id="name" required>
-				</div>
-				<div class="form-group">
-					<label>Student ID</label> <input class="form-control" type="text"
-						placeholder="Student ID" aria-label="Number" id="number" required>
-				</div>
-				<button type="submit" class="btn btn-outline-dark">Sign in</button>
-			</form>
-
-
-
+			<p>Surprise!</p>
+			<p>Something unexpected, right?</p>
 		</div>
 	</div>
-
 
 
 	<div class="modal" id="myModal">

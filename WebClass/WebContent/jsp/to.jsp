@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -19,8 +21,8 @@
 </head>
 <body>
 
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="Navbar">
-		<a class="navbar-brand" href="something.html">Something</a>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand" href="something.jsp">Something</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbarSupportedContent"
 			aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -30,15 +32,15 @@
 
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active"><a class="nav-link"
-					href="unexpected.html">unexpected</a></li>
-				<li class="nav-item"><a class="nav-link" href="will.html">will</a>
+				<li class="nav-item"><a class="nav-link" href="unexpected.jsp">unexpected</a>
 				</li>
-				<li class="nav-item"><a class="nav-link" href="happen.html">happen</a>
+				<li class="nav-item"><a class="nav-link" href="will.jsp">will</a>
 				</li>
-				<li class="nav-item"><a class="nav-link" href="to.html">to</a>
+				<li class="nav-item"><a class="nav-link" href="happen.jsp">happen</a>
 				</li>
-				<li class="nav-item"><a class="nav-link" href="you.html">you</a>
+				<li class="nav-item active"><a class="nav-link" href="to.jsp">to</a>
+				</li>
+				<li class="nav-item"><a class="nav-link" href="you.jsp">you</a>
 				</li>
 			</ul>
 			<form class="form-inline my-2 my-lg-0" id="LoginForm">
@@ -52,51 +54,36 @@
 	</nav>
 
 
-
 	<div class="jumbotron">
 		<div class="container">
-			<h1 class="display-3">Unexpected</h1>
-			<p class="lead">You can sign up here.</p>
+			<h1 class="display-3">To</h1>
+			<p class="lead">Things I want to show you.</p>
 			<hr class="my-4">
-
-
-			<form id="SignUpForm">
-				<div class="form-group">
-					<label>Grade</label><br>
-					<div class="btn-group" data-toggle="buttons" id="grades">
-						<label class="btn btn-secondary active"> <input
-							type="radio" name="grade" id="grade1" checked> Grade 1
-						</label> <label class="btn btn-secondary"> <input type="radio"
-							name="grade" id="grade2"> Grade 2
-						</label> <label class="btn btn-secondary"> <input type="radio"
-							name="grade" id="grade3"> Grade 3
-						</label>
-					</div>
-					<small id="Help" class="form-text text-muted">we'll never
-						share your grade with anyone else.</small>
+			
+			
+			<div class="container">
+				<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+				  <div class="carousel-inner">
+				    <div class="carousel-item active">
+				      <img class="d-block w-100" src="http://img.picturequotes.com/2/433/432592/the-beauty-of-doing-nothing-quote-1.jpg" alt="The beauty of doing nothing">
+				    </div>
+				    <div class="carousel-item">
+				      <img class="d-block w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEKJ3I5fWEiV9WhnmJXT7_CN5Lizx7kHEr3cfzHE12TFquG8N-pg" Alt="use brain">
+				    </div>
+				    <div class="carousel-item">
+				      <img class="d-block w-100" src="https://i.pinimg.com/736x/a9/5b/e5/a95be5b7d0e1dc3c948ac79f37d49875--healthy-skin-healthy-tips.jpg" alt="Drink water">
+				    </div>
+				  </div>
+				  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+				    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				    <span class="sr-only">Previous</span>
+				  </a>
+				  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+				    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+				    <span class="sr-only">Next</span>
+				  </a>
 				</div>
-				<div class="form-group">
-					<label>Class</label> <select class="form-control" id="class">
-						<option value="1">1</option>
-						<option value="2">2</option>
-						<option value="3">3</option>
-						<option value="4">4</option>
-						<option value="5">5</option>
-						<option value="6">6</option>
-					</select>
-				</div>
-				<div class="form-group">
-					<label>Name</label> <input class="form-control" type="text"
-						placeholder="Name" aria-label="Name" id="name" required>
-				</div>
-				<div class="form-group">
-					<label>Student ID</label> <input class="form-control" type="text"
-						placeholder="Student ID" aria-label="Number" id="number" required>
-				</div>
-				<button type="submit" class="btn btn-outline-dark">Sign in</button>
-			</form>
-
-
+			</div>
 
 		</div>
 	</div>
