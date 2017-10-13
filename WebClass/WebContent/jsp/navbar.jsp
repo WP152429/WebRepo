@@ -28,7 +28,7 @@
 			if(user == null) {
 		%>
 		<form class="form-inline my-2 my-lg-0" id="LoginForm">
-			<input class="form-control mr-sm-2" type="text" placeholder="ID"
+			<input class="form-control mr-sm-2" type="email" placeholder="ID"
 				aria-label="ID" id="id" required> <input
 				class="form-control mr-sm-2" type="password" placeholder="PWD"
 				aria-label="PWD" id="pwd" required>
