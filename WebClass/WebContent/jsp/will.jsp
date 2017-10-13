@@ -228,6 +228,6 @@
 		crossorigin="anonymous"></script>
 
 
-	<script src="../js/js.js?ver=0.0.1"></script>
+	<script src="../js/js.js?ver=0.0.2"></script>
 </body>
 </html>
